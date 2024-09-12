@@ -21,15 +21,26 @@ onCustomWidgetBeforeUpdate (changedProps) {
 
 }
 onCustomWidgetAfterUpdate () {
+	this.render();
 
 }
 onCustomWidgetDestroy () {
 
 }
 
+async render () {
+	const dataBinding = this.dataBinding;
+	if (!dataBinding || dataBinding.state !== 'success') {
+		return
+	}
+	this._root.textContent = JSON.stringify(dataBinding);
+}
+
+/*
 render () {
 	this._root.textContent = `Hello Custom Widget clientWidth: ${this.clientWidth}, clientWidth: ${this.clientHeight}`
 }
+*/
  }
 
  customElements.define('com-sap-sac-exercise-lkj001-main', Main)
