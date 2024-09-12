@@ -4,7 +4,7 @@
  <style>
  </style>
  <div id="root" style="width: 100%; height: 100%;">
- Hello WebComponent lkj001
+ Hello WebComponent lkj003
  </div>
  `
  class Main extends HTMLElement {
@@ -43,5 +43,5 @@ render () {
 */
  }
 
- customElements.define('com-sap-sac-exercise-lkj001-main', Main)
+ customElements.define('com-sap-sac-exercise-lkj003-main', Main)
  })()
